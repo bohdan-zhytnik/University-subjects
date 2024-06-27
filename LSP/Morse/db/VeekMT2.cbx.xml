@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="VeekMT2">
+		<CBX_INST_ENTRY INSTANCE_NAME="|MorseZhytnboh|Buzzer750Hz:inst8|Buzzer:inst_Buzzer|Buzzer_ClockGen:b2v_inst_clockGenrator|pllAudioClock:audioPllClockGen|altpll:altpll_component" CBX_FILE_NAME="pllAudioClock_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>

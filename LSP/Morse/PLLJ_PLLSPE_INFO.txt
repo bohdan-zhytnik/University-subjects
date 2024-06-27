@@ -1,0 +1,5 @@
+PLL_Name	Buzzer750Hz:inst8|Buzzer:inst_Buzzer|Buzzer_ClockGen:b2v_inst_clockGenrator|pllAudioClock:audioPllClockGen|altpll:altpll_component|pllAudioClock_altpll:auto_generated|pll1
+PLLJITTER	15
+PLLSPEmax	84
+PLLSPEmin	-53
+

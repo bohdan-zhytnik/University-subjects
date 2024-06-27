@@ -1,0 +1,553 @@
+Analysis & Synthesis report for SvHad
+Mon Mar 11 10:28:59 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |SvetelnyHad|Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:next_state
+  9. State Machine - |SvetelnyHad|Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state
+ 10. State Machine - |SvetelnyHad|Lcd16x2Text:instLCD|LcdController:b2v_inst2|\switch_rw:nstate
+ 11. State Machine - |SvetelnyHad|Lcd16x2Text:instLCD|LcdController:b2v_inst2|\switch_rw:state
+ 12. Registers Removed During Synthesis
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Parameter Settings for User Entity Instance: Lcd16x2Text:instLCD
+ 18. Parameter Settings for User Entity Instance: Lcd16x2Text:instLCD|LcdTextWr:b2v_inst
+ 19. Parameter Settings for User Entity Instance: ClockDivider:instC
+ 20. Parameter Settings for User Entity Instance: toConstFromInteger:inst
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                          ;
++------------------------------------+--------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Mar 11 10:28:59 2024            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; SvHad                                            ;
+; Top-level Entity Name              ; SvetelnyHad                                      ;
+; Family                             ; Cyclone IV E                                     ;
+; Total logic elements               ; 185                                              ;
+;     Total combinational functions  ; 164                                              ;
+;     Dedicated logic registers      ; 130                                              ;
+; Total registers                    ; 130                                              ;
+; Total pins                         ; 39                                               ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0                                                ;
+; Embedded Multiplier 9-bit elements ; 0                                                ;
+; Total PLLs                         ; 0                                                ;
++------------------------------------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; SvetelnyHad        ; SvHad              ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; On                 ; Off                ;
+; VHDL Show LMF Mapping Messages                                             ; Off                ;                    ;
+; VHDL Version                                                               ; VHDL_2008          ; VHDL_1993          ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------+---------+
+; Off_VEEKMT2_LCD.vhd              ; yes             ; User VHDL File                     ; C:/Users/zhytnboh/LSP/SvHad/Off_VEEKMT2_LCD.vhd    ;         ;
+; SvetelnyHad.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/zhytnboh/LSP/SvHad/SvetelnyHad.bdf        ;         ;
+; lcd16x2text.vhd                  ; yes             ; Auto-Found VHDL File               ; c:/sps/dce/library/lcd16x2text.vhd                 ;         ;
+; clockdivider.vhd                 ; yes             ; Auto-Found VHDL File               ; C:/Users/zhytnboh/LSP/SvHad/clockdivider.vhd       ;         ;
+; towires18.vhd                    ; yes             ; Auto-Found VHDL File               ; C:/Users/zhytnboh/LSP/SvHad/towires18.vhd          ;         ;
+; shiftleftright18.vhd             ; yes             ; Auto-Found VHDL File               ; C:/Users/zhytnboh/LSP/SvHad/shiftleftright18.vhd   ;         ;
+; multiplexer2x1.vhd               ; yes             ; Auto-Found VHDL File               ; C:/Users/zhytnboh/LSP/SvHad/multiplexer2x1.vhd     ;         ;
+; toconstfrominteger.vhd           ; yes             ; Auto-Found VHDL File               ; C:/Users/zhytnboh/LSP/SvHad/toconstfrominteger.vhd ;         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 185            ;
+;                                             ;                ;
+; Total combinational functions               ; 164            ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 69             ;
+;     -- 3 input functions                    ; 35             ;
+;     -- <=2 input functions                  ; 60             ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 125            ;
+;     -- arithmetic mode                      ; 39             ;
+;                                             ;                ;
+; Total registers                             ; 130            ;
+;     -- Dedicated logic registers            ; 130            ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 39             ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 70             ;
+; Total fan-out                               ; 1004           ;
+; Average fan-out                             ; 2.64           ;
++---------------------------------------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                      ; Library Name ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+--------------+
+; |SvetelnyHad                    ; 164 (2)           ; 130 (2)      ; 0           ; 0            ; 0       ; 0         ; 39   ; 0            ; |SvetelnyHad                                             ; work         ;
+;    |ClockDivider:instC|         ; 35 (35)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SvetelnyHad|ClockDivider:instC                          ; work         ;
+;    |Lcd16x2Text:instLCD|        ; 109 (0)           ; 85 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SvetelnyHad|Lcd16x2Text:instLCD                         ; work         ;
+;       |LcdController:b2v_inst2| ; 79 (79)           ; 66 (66)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SvetelnyHad|Lcd16x2Text:instLCD|LcdController:b2v_inst2 ; work         ;
+;       |LcdTextWr:b2v_inst|      ; 30 (30)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SvetelnyHad|Lcd16x2Text:instLCD|LcdTextWr:b2v_inst      ; work         ;
+;    |ShiftLeftRight18:inst5|     ; 18 (18)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SvetelnyHad|ShiftLeftRight18:inst5                      ; work         ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |SvetelnyHad|Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:next_state                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ;
++-----------------------------------------+--------------------------+-------------------------------+-----------------------------+--------------------------------------+------------------------------+----------------------------+---------------------------------------+-----------------------------------------+------------------------------------+---------------------------------+----------------------------------------+-------------------------------------+------------------------------+----------------------------+--------------------------+------------------------+------------------------+------------------------+
+; Name                                    ; \fsm:next_state.wait_end ; \fsm:next_state.write_clear_e ; \fsm:next_state.write_clear ; \fsm:next_state.write_data_busy_test ; \fsm:next_state.write_data_e ; \fsm:next_state.write_data ; \fsm:next_state.write_address_busy_OK ; \fsm:next_state.write_address_busy_test ; \fsm:next_state.write_address_hold ; \fsm:next_state.write_address_e ; \fsm:next_state.command_loop_wait_RDYN ; \fsm:next_state.wait_fast_frequency ; \fsm:next_state.func_set_inc ; \fsm:next_state.func_set_e ; \fsm:next_state.func_set ; \fsm:next_state.reset2 ; \fsm:next_state.reset1 ; \fsm:next_state.reset0 ;
++-----------------------------------------+--------------------------+-------------------------------+-----------------------------+--------------------------------------+------------------------------+----------------------------+---------------------------------------+-----------------------------------------+------------------------------------+---------------------------------+----------------------------------------+-------------------------------------+------------------------------+----------------------------+--------------------------+------------------------+------------------------+------------------------+
+; \fsm:next_state.reset0                  ; 0                        ; 0                             ; 0                           ; 0                                    ; 0                            ; 0                          ; 0                                     ; 0                                       ; 0                                  ; 0                               ; 0                                      ; 0                                   ; 0                            ; 0                          ; 0                        ; 0                      ; 0                      ; 0                      ;
+; \fsm:next_state.reset1                  ; 0                        ; 0                             ; 0                           ; 0                                    ; 0                            ; 0                          ; 0                                     ; 0                                       ; 0                                  ; 0                               ; 0                                      ; 0                                   ; 0                            ; 0                          ; 0                        ; 0                      ; 1                      ; 1                      ;
+; \fsm:next_state.reset2                  ; 0                        ; 0                             ; 0                           ; 0                                    ; 0                            ; 0                          ; 0                                     ; 0                                       ; 0                                  ; 0                               ; 0                                      ; 0                                   ; 0                            ; 0                          ; 0                        ; 1                      ; 0                      ; 1                      ;
+; \fsm:next_state.func_set                ; 0                        ; 0                             ; 0                           ; 0                                    ; 0                            ; 0                          ; 0                                     ; 0                                       ; 0                                  ; 0                               ; 0                                      ; 0                                   ; 0                            ; 0                          ; 1                        ; 0                      ; 0                      ; 1                      ;
+; \fsm:next_state.func_set_e              ; 0                        ; 0                             ; 0                           ; 0                                    ; 0                            ; 0                          ; 0                                     ; 0                                       ; 0                                  ; 0                               ; 0                                      ; 0                                   ; 0                            ; 1                          ; 0                        ; 0                      ; 0                      ; 1                      ;
+; \fsm:next_state.func_set_inc            ; 0                        ; 0                             ; 0                           ; 0                                    ; 0                            ; 0                          ; 0                                     ; 0                                       ; 0                                  ; 0                               ; 0                                      ; 0                                   ; 1                            ; 0                          ; 0                        ; 0                      ; 0                      ; 1                      ;
+; \fsm:next_state.wait_fast_frequency     ; 0                        ; 0                             ; 0                           ; 0                                    ; 0                            ; 0                          ; 0                                     ; 0                                       ; 0                                  ; 0                               ; 0                                      ; 1                                   ; 0                            ; 0                          ; 0                        ; 0                      ; 0                      ; 1                      ;
+; \fsm:next_state.command_loop_wait_RDYN  ; 0                        ; 0                             ; 0                           ; 0                                    ; 0                            ; 0                          ; 0                                     ; 0                                       ; 0                                  ; 0                               ; 1                                      ; 0                                   ; 0                            ; 0                          ; 0                        ; 0                      ; 0                      ; 1                      ;
+; \fsm:next_state.write_address_e         ; 0                        ; 0                             ; 0                           ; 0                                    ; 0                            ; 0                          ; 0                                     ; 0                                       ; 0                                  ; 1                               ; 0                                      ; 0                                   ; 0                            ; 0                          ; 0                        ; 0                      ; 0                      ; 1                      ;
+; \fsm:next_state.write_address_hold      ; 0                        ; 0                             ; 0                           ; 0                                    ; 0                            ; 0                          ; 0                                     ; 0                                       ; 1                                  ; 0                               ; 0                                      ; 0                                   ; 0                            ; 0                          ; 0                        ; 0                      ; 0                      ; 1                      ;
+; \fsm:next_state.write_address_busy_test ; 0                        ; 0                             ; 0                           ; 0                                    ; 0                            ; 0                          ; 0                                     ; 1                                       ; 0                                  ; 0                               ; 0                                      ; 0                                   ; 0                            ; 0                          ; 0                        ; 0                      ; 0                      ; 1                      ;
+; \fsm:next_state.write_address_busy_OK   ; 0                        ; 0                             ; 0                           ; 0                                    ; 0                            ; 0                          ; 1                                     ; 0                                       ; 0                                  ; 0                               ; 0                                      ; 0                                   ; 0                            ; 0                          ; 0                        ; 0                      ; 0                      ; 1                      ;
+; \fsm:next_state.write_data              ; 0                        ; 0                             ; 0                           ; 0                                    ; 0                            ; 1                          ; 0                                     ; 0                                       ; 0                                  ; 0                               ; 0                                      ; 0                                   ; 0                            ; 0                          ; 0                        ; 0                      ; 0                      ; 1                      ;
+; \fsm:next_state.write_data_e            ; 0                        ; 0                             ; 0                           ; 0                                    ; 1                            ; 0                          ; 0                                     ; 0                                       ; 0                                  ; 0                               ; 0                                      ; 0                                   ; 0                            ; 0                          ; 0                        ; 0                      ; 0                      ; 1                      ;
+; \fsm:next_state.write_data_busy_test    ; 0                        ; 0                             ; 0                           ; 1                                    ; 0                            ; 0                          ; 0                                     ; 0                                       ; 0                                  ; 0                               ; 0                                      ; 0                                   ; 0                            ; 0                          ; 0                        ; 0                      ; 0                      ; 1                      ;
+; \fsm:next_state.write_clear             ; 0                        ; 0                             ; 1                           ; 0                                    ; 0                            ; 0                          ; 0                                     ; 0                                       ; 0                                  ; 0                               ; 0                                      ; 0                                   ; 0                            ; 0                          ; 0                        ; 0                      ; 0                      ; 1                      ;
+; \fsm:next_state.write_clear_e           ; 0                        ; 1                             ; 0                           ; 0                                    ; 0                            ; 0                          ; 0                                     ; 0                                       ; 0                                  ; 0                               ; 0                                      ; 0                                   ; 0                            ; 0                          ; 0                        ; 0                      ; 0                      ; 1                      ;
+; \fsm:next_state.wait_end                ; 1                        ; 0                             ; 0                           ; 0                                    ; 0                            ; 0                          ; 0                                     ; 0                                       ; 0                                  ; 0                               ; 0                                      ; 0                                   ; 0                            ; 0                          ; 0                        ; 0                      ; 0                      ; 1                      ;
++-----------------------------------------+--------------------------+-------------------------------+-----------------------------+--------------------------------------+------------------------------+----------------------------+---------------------------------------+-----------------------------------------+------------------------------------+---------------------------------+----------------------------------------+-------------------------------------+------------------------------+----------------------------+--------------------------+------------------------+------------------------+------------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |SvetelnyHad|Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++--------------------------------------------+-----------------------------+----------------------------------+--------------------------------+-----------------------------------------+---------------------------------+-------------------------------+------------------------------------------+--------------------------------------------+---------------------------------------+------------------------------------+-------------------------------------------+----------------------------------------+---------------------------------+-------------------------------+-----------------------------+---------------------------+---------------------------+---------------------------+
+; Name                                       ; \fsm:current_state.wait_end ; \fsm:current_state.write_clear_e ; \fsm:current_state.write_clear ; \fsm:current_state.write_data_busy_test ; \fsm:current_state.write_data_e ; \fsm:current_state.write_data ; \fsm:current_state.write_address_busy_OK ; \fsm:current_state.write_address_busy_test ; \fsm:current_state.write_address_hold ; \fsm:current_state.write_address_e ; \fsm:current_state.command_loop_wait_RDYN ; \fsm:current_state.wait_fast_frequency ; \fsm:current_state.func_set_inc ; \fsm:current_state.func_set_e ; \fsm:current_state.func_set ; \fsm:current_state.reset2 ; \fsm:current_state.reset1 ; \fsm:current_state.reset0 ;
++--------------------------------------------+-----------------------------+----------------------------------+--------------------------------+-----------------------------------------+---------------------------------+-------------------------------+------------------------------------------+--------------------------------------------+---------------------------------------+------------------------------------+-------------------------------------------+----------------------------------------+---------------------------------+-------------------------------+-----------------------------+---------------------------+---------------------------+---------------------------+
+; \fsm:current_state.reset0                  ; 0                           ; 0                                ; 0                              ; 0                                       ; 0                               ; 0                             ; 0                                        ; 0                                          ; 0                                     ; 0                                  ; 0                                         ; 0                                      ; 0                               ; 0                             ; 0                           ; 0                         ; 0                         ; 0                         ;
+; \fsm:current_state.reset1                  ; 0                           ; 0                                ; 0                              ; 0                                       ; 0                               ; 0                             ; 0                                        ; 0                                          ; 0                                     ; 0                                  ; 0                                         ; 0                                      ; 0                               ; 0                             ; 0                           ; 0                         ; 1                         ; 1                         ;
+; \fsm:current_state.reset2                  ; 0                           ; 0                                ; 0                              ; 0                                       ; 0                               ; 0                             ; 0                                        ; 0                                          ; 0                                     ; 0                                  ; 0                                         ; 0                                      ; 0                               ; 0                             ; 0                           ; 1                         ; 0                         ; 1                         ;
+; \fsm:current_state.func_set                ; 0                           ; 0                                ; 0                              ; 0                                       ; 0                               ; 0                             ; 0                                        ; 0                                          ; 0                                     ; 0                                  ; 0                                         ; 0                                      ; 0                               ; 0                             ; 1                           ; 0                         ; 0                         ; 1                         ;
+; \fsm:current_state.func_set_e              ; 0                           ; 0                                ; 0                              ; 0                                       ; 0                               ; 0                             ; 0                                        ; 0                                          ; 0                                     ; 0                                  ; 0                                         ; 0                                      ; 0                               ; 1                             ; 0                           ; 0                         ; 0                         ; 1                         ;
+; \fsm:current_state.func_set_inc            ; 0                           ; 0                                ; 0                              ; 0                                       ; 0                               ; 0                             ; 0                                        ; 0                                          ; 0                                     ; 0                                  ; 0                                         ; 0                                      ; 1                               ; 0                             ; 0                           ; 0                         ; 0                         ; 1                         ;
+; \fsm:current_state.wait_fast_frequency     ; 0                           ; 0                                ; 0                              ; 0                                       ; 0                               ; 0                             ; 0                                        ; 0                                          ; 0                                     ; 0                                  ; 0                                         ; 1                                      ; 0                               ; 0                             ; 0                           ; 0                         ; 0                         ; 1                         ;
+; \fsm:current_state.command_loop_wait_RDYN  ; 0                           ; 0                                ; 0                              ; 0                                       ; 0                               ; 0                             ; 0                                        ; 0                                          ; 0                                     ; 0                                  ; 1                                         ; 0                                      ; 0                               ; 0                             ; 0                           ; 0                         ; 0                         ; 1                         ;
+; \fsm:current_state.write_address_e         ; 0                           ; 0                                ; 0                              ; 0                                       ; 0                               ; 0                             ; 0                                        ; 0                                          ; 0                                     ; 1                                  ; 0                                         ; 0                                      ; 0                               ; 0                             ; 0                           ; 0                         ; 0                         ; 1                         ;
+; \fsm:current_state.write_address_hold      ; 0                           ; 0                                ; 0                              ; 0                                       ; 0                               ; 0                             ; 0                                        ; 0                                          ; 1                                     ; 0                                  ; 0                                         ; 0                                      ; 0                               ; 0                             ; 0                           ; 0                         ; 0                         ; 1                         ;
+; \fsm:current_state.write_address_busy_test ; 0                           ; 0                                ; 0                              ; 0                                       ; 0                               ; 0                             ; 0                                        ; 1                                          ; 0                                     ; 0                                  ; 0                                         ; 0                                      ; 0                               ; 0                             ; 0                           ; 0                         ; 0                         ; 1                         ;
+; \fsm:current_state.write_address_busy_OK   ; 0                           ; 0                                ; 0                              ; 0                                       ; 0                               ; 0                             ; 1                                        ; 0                                          ; 0                                     ; 0                                  ; 0                                         ; 0                                      ; 0                               ; 0                             ; 0                           ; 0                         ; 0                         ; 1                         ;
+; \fsm:current_state.write_data              ; 0                           ; 0                                ; 0                              ; 0                                       ; 0                               ; 1                             ; 0                                        ; 0                                          ; 0                                     ; 0                                  ; 0                                         ; 0                                      ; 0                               ; 0                             ; 0                           ; 0                         ; 0                         ; 1                         ;
+; \fsm:current_state.write_data_e            ; 0                           ; 0                                ; 0                              ; 0                                       ; 1                               ; 0                             ; 0                                        ; 0                                          ; 0                                     ; 0                                  ; 0                                         ; 0                                      ; 0                               ; 0                             ; 0                           ; 0                         ; 0                         ; 1                         ;
+; \fsm:current_state.write_data_busy_test    ; 0                           ; 0                                ; 0                              ; 1                                       ; 0                               ; 0                             ; 0                                        ; 0                                          ; 0                                     ; 0                                  ; 0                                         ; 0                                      ; 0                               ; 0                             ; 0                           ; 0                         ; 0                         ; 1                         ;
+; \fsm:current_state.write_clear             ; 0                           ; 0                                ; 1                              ; 0                                       ; 0                               ; 0                             ; 0                                        ; 0                                          ; 0                                     ; 0                                  ; 0                                         ; 0                                      ; 0                               ; 0                             ; 0                           ; 0                         ; 0                         ; 1                         ;
+; \fsm:current_state.write_clear_e           ; 0                           ; 1                                ; 0                              ; 0                                       ; 0                               ; 0                             ; 0                                        ; 0                                          ; 0                                     ; 0                                  ; 0                                         ; 0                                      ; 0                               ; 0                             ; 0                           ; 0                         ; 0                         ; 1                         ;
+; \fsm:current_state.wait_end                ; 1                           ; 0                                ; 0                              ; 0                                       ; 0                               ; 0                             ; 0                                        ; 0                                          ; 0                                     ; 0                                  ; 0                                         ; 0                                      ; 0                               ; 0                             ; 0                           ; 0                         ; 0                         ; 1                         ;
++--------------------------------------------+-----------------------------+----------------------------------+--------------------------------+-----------------------------------------+---------------------------------+-------------------------------+------------------------------------------+--------------------------------------------+---------------------------------------+------------------------------------+-------------------------------------------+----------------------------------------+---------------------------------+-------------------------------+-----------------------------+---------------------------+---------------------------+---------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |SvetelnyHad|Lcd16x2Text:instLCD|LcdController:b2v_inst2|\switch_rw:nstate                                                              ;
++----------------------------------+----------------------------+----------------------------+-------------------------+----------------------------------+
+; Name                             ; \switch_rw:nstate.rws_busy ; \switch_rw:nstate.rws_read ; \switch_rw:nstate.rws_z ; \switch_rw:nstate.rws_write_data ;
++----------------------------------+----------------------------+----------------------------+-------------------------+----------------------------------+
+; \switch_rw:nstate.rws_write_data ; 0                          ; 0                          ; 0                       ; 0                                ;
+; \switch_rw:nstate.rws_z          ; 0                          ; 0                          ; 1                       ; 1                                ;
+; \switch_rw:nstate.rws_read       ; 0                          ; 1                          ; 0                       ; 1                                ;
+; \switch_rw:nstate.rws_busy       ; 1                          ; 0                          ; 0                       ; 1                                ;
++----------------------------------+----------------------------+----------------------------+-------------------------+----------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |SvetelnyHad|Lcd16x2Text:instLCD|LcdController:b2v_inst2|\switch_rw:state                                                          ;
++---------------------------------+---------------------------------+---------------------------+------------------------+---------------------------+
+; Name                            ; \switch_rw:state.rws_write_data ; \switch_rw:state.rws_read ; \switch_rw:state.rws_z ; \switch_rw:state.rws_busy ;
++---------------------------------+---------------------------------+---------------------------+------------------------+---------------------------+
+; \switch_rw:state.rws_busy       ; 0                               ; 0                         ; 0                      ; 0                         ;
+; \switch_rw:state.rws_z          ; 0                               ; 0                         ; 1                      ; 1                         ;
+; \switch_rw:state.rws_read       ; 0                               ; 1                         ; 0                      ; 1                         ;
+; \switch_rw:state.rws_write_data ; 1                               ; 0                         ; 0                      ; 1                         ;
++---------------------------------+---------------------------------+---------------------------+------------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                              ;
++----------------------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                                          ; Reason for Removal                     ;
++----------------------------------------------------------------------------------------+----------------------------------------+
+; Lcd16x2Text:instLCD|LcdTextWr:b2v_inst|DATA[7]                                         ; Stuck at GND due to stuck port data_in ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:VDATA[7]                              ; Stuck at GND due to stuck port data_in ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state.reset0                  ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state.reset1                  ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state.reset2                  ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state.func_set                ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state.func_set_e              ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state.func_set_inc            ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state.wait_fast_frequency     ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state.command_loop_wait_RDYN  ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state.write_address_e         ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state.write_address_hold      ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state.write_address_busy_test ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state.write_address_busy_OK   ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state.write_data              ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state.write_data_e            ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state.write_data_busy_test    ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state.write_clear             ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state.write_clear_e           ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:current_state.wait_end                ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\switch_rw:state.rws_busy                  ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\switch_rw:state.rws_z                     ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\switch_rw:state.rws_read                  ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\switch_rw:state.rws_write_data            ; Lost fanout                            ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:next_state.write_clear                ; Stuck at GND due to stuck port data_in ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:next_state.write_clear_e              ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 26                                                 ;                                        ;
++----------------------------------------------------------------------------------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                     ;
++-------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------+
+; Register name                                                           ; Reason for Removal        ; Registers Removed due to This Register                                    ;
++-------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------+
+; Lcd16x2Text:instLCD|LcdTextWr:b2v_inst|DATA[7]                          ; Stuck at GND              ; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:VDATA[7]                 ;
+;                                                                         ; due to stuck port data_in ;                                                                           ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:next_state.write_clear ; Stuck at GND              ; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:next_state.write_clear_e ;
+;                                                                         ; due to stuck port data_in ;                                                                           ;
++-------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 130   ;
+; Number of registers using Synchronous Clear  ; 55    ;
+; Number of registers using Synchronous Load   ; 4     ;
+; Number of registers using Asynchronous Clear ; 55    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 46    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------+
+; Inverted Register Statistics                                       ;
++----------------------------------------------------------+---------+
+; Inverted Register                                        ; Fan out ;
++----------------------------------------------------------+---------+
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|\fsm:VLCD_EN ; 1       ;
+; Lcd16x2Text:instLCD|LcdController:b2v_inst2|ACKN         ; 4       ;
+; Total number of inverted registers = 2                   ;         ;
++----------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+; 3:1                ; 18 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; Yes        ; |SvetelnyHad|ShiftLeftRight18:inst5|\pshift:rg[5]                        ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |SvetelnyHad|Lcd16x2Text:instLCD|LcdController:b2v_inst2|LCD_DATA_OUT[5] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lcd16x2Text:instLCD ;
++----------------+------------------+------------------------------+
+; Parameter Name ; Value            ; Type                         ;
++----------------+------------------+------------------------------+
+; line1          ; *LCD-Controller* ; String                       ;
+; line2          ; can display text ; String                       ;
++----------------+------------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lcd16x2Text:instLCD|LcdTextWr:b2v_inst ;
++----------------+------------------+-------------------------------------------------+
+; Parameter Name ; Value            ; Type                                            ;
++----------------+------------------+-------------------------------------------------+
+; line1          ; *LCD-Controller* ; String                                          ;
+; line2          ; can display text ; String                                          ;
++----------------+------------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ClockDivider:instC ;
++----------------+----------+-------------------------------------+
+; Parameter Name ; Value    ; Type                                ;
++----------------+----------+-------------------------------------+
+; divisor        ; 25000000 ; Signed Integer                      ;
++----------------+----------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: toConstFromInteger:inst ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; n              ; 15    ; Signed Integer                              ;
+; wbus           ; 18    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Mon Mar 11 10:28:50 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SvHad -c SvHad
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file majorita3.bdf
+    Info (12023): Found entity 1: majorita3
+Info (12021): Found 1 design units, including 1 entities, in source file testmajoritynadesce.bdf
+    Info (12023): Found entity 1: TestMajorityNaDesce
+Info (12021): Found 1 design units, including 1 entities, in source file majorita3n.bdf
+    Info (12023): Found entity 1: majorita3n
+Info (12021): Found 1 design units, including 1 entities, in source file swtoled.bdf
+    Info (12023): Found entity 1: SWtoLED
+Info (12021): Found 2 design units, including 1 entities, in source file off_veekmt2_lcd.vhd
+    Info (12022): Found design unit 1: Off_VEEKMT2_LCD-beh
+    Info (12023): Found entity 1: Off_VEEKMT2_LCD
+Info (12021): Found 1 design units, including 1 entities, in source file svetelnyhad.bdf
+    Info (12023): Found entity 1: SvetelnyHad
+Info (12127): Elaborating entity "SvetelnyHad" for the top level hierarchy
+Info (12128): Elaborating entity "Off_VEEKMT2_LCD" for hierarchy "Off_VEEKMT2_LCD:inst6"
+Warning (12125): Using design file /sps/dce/library/lcd16x2text.vhd, which is not specified as a design file for the current project, but contains definitions for 6 design units and 3 entities in project
+    Info (12022): Found design unit 1: Lcd16x2Text-bdf_type
+    Info (12022): Found design unit 2: LcdController-rtl
+    Info (12022): Found design unit 3: LcdTextWr-rtl
+    Info (12023): Found entity 1: Lcd16x2Text
+    Info (12023): Found entity 2: LcdController
+    Info (12023): Found entity 3: LcdTextWr
+Info (12128): Elaborating entity "Lcd16x2Text" for hierarchy "Lcd16x2Text:instLCD"
+Info (12128): Elaborating entity "LcdTextWr" for hierarchy "Lcd16x2Text:instLCD|LcdTextWr:b2v_inst"
+Info (12128): Elaborating entity "LcdController" for hierarchy "Lcd16x2Text:instLCD|LcdController:b2v_inst2"
+Warning (12125): Using design file clockdivider.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: ClockDivider-behav
+    Info (12023): Found entity 1: ClockDivider
+Info (12128): Elaborating entity "ClockDivider" for hierarchy "ClockDivider:instC"
+Warning (12125): Using design file towires18.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: toWires18-rtl
+    Info (12023): Found entity 1: toWires18
+Info (12128): Elaborating entity "toWires18" for hierarchy "toWires18:inst7"
+Warning (12125): Using design file shiftleftright18.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: ShiftLeftRight18-rtl
+    Info (12023): Found entity 1: ShiftLeftRight18
+Info (12128): Elaborating entity "ShiftLeftRight18" for hierarchy "ShiftLeftRight18:inst5"
+Warning (12125): Using design file multiplexer2x1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Multiplexer2x1-behavorial
+    Info (12023): Found entity 1: Multiplexer2x1
+Info (12128): Elaborating entity "Multiplexer2x1" for hierarchy "Multiplexer2x1:inst8"
+Warning (12125): Using design file toconstfrominteger.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: toConstFromInteger-behavorial
+    Info (12023): Found entity 1: toConstFromInteger
+Info (12128): Elaborating entity "toConstFromInteger" for hierarchy "toConstFromInteger:inst"
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LCD_DIM" is stuck at GND
+    Warning (13410): Pin "LCD_POWER_CTL" is stuck at GND
+    Warning (13410): Pin "LCD_ON" is stuck at VCC
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 22 registers lost all their fanouts during netlist optimizations.
+Warning (20013): Ignored assignments for entity "VEEK_MT2" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity VEEK_MT2 -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity VEEK_MT2 -section_id Top was ignored
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 228 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 29 output pins
+    Info (21060): Implemented 8 bidirectional pins
+    Info (21061): Implemented 189 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 4656 megabytes
+    Info: Processing ended: Mon Mar 11 10:28:59 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:02
+
+

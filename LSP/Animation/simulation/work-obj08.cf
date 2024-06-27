@@ -1,0 +1,13 @@
+v 4
+file . "../LCDlogic0.vhd" "a60079260b8683f9dc96ab9c38d982015412f8b9" "20240517161949.537":
+  entity lcdlogic0anim at 5( 272) + 0 on 623;
+  architecture behavioral of lcdlogic0anim at 21( 1348) + 0 on 624;
+file . "../LCDpackage.vhd" "c3860d81580e12155895f11f6b96f12cdeee6332" "20240517161948.670":
+  package lcdpackage at 10( 607) + 0 on 619 body;
+  package body lcdpackage at 79( 3944) + 0 on 620;
+file . "../testbench_LCDlogic.vhd" "5ce171017b855d40b98c7eb2dd1e03cd6259b365" "20240517161949.589":
+  entity testbench_lcdlogic at 13( 799) + 0 on 625;
+  architecture testbench of testbench_lcdlogic at 23( 1072) + 0 on 626;
+file . "../imgLSPbmp.vhd" "0d4eb0f396d9e8ea42ff558648cbbf5aecb945cb" "20240517161948.738":
+  entity imglspbmp at 11( 643) + 0 on 621;
+  architecture rtl of imglspbmp at 18( 917) + 0 on 622;

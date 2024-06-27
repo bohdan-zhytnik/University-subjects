@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Mar 11 10:28:59 2024
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : SvHad
+Top-level Entity Name : SvetelnyHad
+Family : Cyclone IV E
+Total logic elements : 185
+    Total combinational functions : 164
+    Dedicated logic registers : 130
+Total registers : 130
+Total pins : 39
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,86 @@
+Restore Archived Project report for VeekMT2
+Fri Mar 08 16:59:13 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Fri Mar 08 16:59:13 2024 ;
+; Revision Name                   ; VeekMT2                               ;
+; Top-level Entity Name           ; SvetelnyHad                           ;
+; Family                          ; Cyclone IV E                          ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'C:/SPS/LSP_VeekMT2One - Copy/VeekMT2_tmp_archive.qar' into the 'C:/SPS/LSP_VeekMT2One - Copy_copy/' directory
+Info: Generated report 'VeekMT2.restore.rpt'
+
+
++----------------------------------------------------+
+; Files Restored                                     ;
++----------------------------------------------------+
+; File Name                                          ;
++----------------------------------------------------+
+; @ReadMe.txt                                        ;
+; ClockDivider.vhd                                   ;
+; Multiplexer2x1.vhd                                 ;
+; Off_VEEKMT2_LCD.vhd                                ;
+; SWtoLED.bdf                                        ;
+; ShiftLeftRight18.vhd                               ;
+; SvetelnyHad.bdf                                    ;
+; TestMajorityNaDesce.bdf                            ;
+; VeekMT2.qpf                                        ;
+; VeekMT2.qsf                                        ;
+; VeekMT2.sdc                                        ;
+; VeekMT2_LCD.sdc                                    ;
+; incremental_db/compiled_partitions/VeekMT2.db_info ;
+; majorita3.bdf                                      ;
+; majorita3_Waveform.vwf                             ;
+; majorita3n.bdf                                     ;
+; toConstFromInteger.vhd                             ;
+; toWires18.vhd                                      ;
+; assignment_defaults.qdf                            ;
++----------------------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

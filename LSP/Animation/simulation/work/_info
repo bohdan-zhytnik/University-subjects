@@ -1,0 +1,162 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\13.0sp1
+Eimglspbmp
+Z0 w1711886734
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\SPS\LSP_LCDVeekMT2_Q13\simulation
+Z5 8C:/SPS/LSP_LCDVeekMT2_Q13/imgLSPbmp.vhd
+Z6 FC:/SPS/LSP_LCDVeekMT2_Q13/imgLSPbmp.vhd
+l0
+L12
+VbJ>RGWA_KWS1P;oa6jFLD0
+Z7 OV;C;10.1d;51
+32
+Z8 !s108 1712560882.192000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/SPS/LSP_LCDVeekMT2_Q13/imgLSPbmp.vhd|
+Z10 !s107 C:/SPS/LSP_LCDVeekMT2_Q13/imgLSPbmp.vhd|
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+!s100 PlRS3XTUhi0LIW]K0SBhI2
+!i10b 1
+Artl
+R1
+R2
+R3
+Z13 DEx4 work 9 imglspbmp 0 22 bJ>RGWA_KWS1P;oa6jFLD0
+l141
+L18
+VBWM`emK0H^fG?OhSdhC2E2
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 o>WYLAN2NG[5<D_R_`@7V0
+!i10b 1
+Elcdlogic0
+Z14 w1711970437
+Z15 DPx4 work 10 lcdpackage 0 22 z>RK>V27E6g1AOHL`ldWj1
+R1
+R2
+R3
+R4
+Z16 8C:/SPS/LSP_LCDVeekMT2_Q13/LCDlogic0.vhd
+Z17 FC:/SPS/LSP_LCDVeekMT2_Q13/LCDlogic0.vhd
+l0
+L4
+VQe;j1zRmTW[oCIYNFC1]W2
+R7
+32
+Z18 !s108 1712560882.371000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/SPS/LSP_LCDVeekMT2_Q13/LCDlogic0.vhd|
+Z20 !s107 C:/SPS/LSP_LCDVeekMT2_Q13/LCDlogic0.vhd|
+R11
+R12
+!s100 EKT]VhikiNH6[;:hhW2k30
+!i10b 1
+Abehavioral
+R13
+R15
+R1
+R2
+R3
+DEx4 work 9 lcdlogic0 0 22 Qe;j1zRmTW[oCIYNFC1]W2
+l21
+L14
+VXm>ZS:8AhM9[]8LP;^fiU2
+R7
+32
+R18
+R19
+R20
+R11
+R12
+!s100 a0S0CWV;`=VKY7fS3L=X^0
+!i10b 1
+Plcdpackage
+R1
+R2
+R3
+Z21 w1710610778
+R4
+Z22 8C:/SPS/LSP_LCDVeekMT2_Q13/LCDpackage.vhd
+Z23 FC:/SPS/LSP_LCDVeekMT2_Q13/LCDpackage.vhd
+l0
+L12
+Vz>RK>V27E6g1AOHL`ldWj1
+R7
+32
+b1
+Z24 !s108 1712560882.491000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/SPS/LSP_LCDVeekMT2_Q13/LCDpackage.vhd|
+Z26 !s107 C:/SPS/LSP_LCDVeekMT2_Q13/LCDpackage.vhd|
+R11
+R12
+!s100 PbTk]bCADnkYbdTNai:F42
+!i10b 1
+Bbody
+R15
+R1
+R2
+R3
+l0
+L79
+VlTi[fYEm<h7@6T:dM>HOK2
+!s100 Zgz9WS<JMHX4@Y65^7[_K1
+R7
+32
+R24
+R25
+R26
+R11
+R12
+nbody
+!i10b 1
+Etestbench_lcdlogic
+Z27 w1712329770
+R15
+Z28 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+R1
+R2
+R3
+R4
+Z29 8C:/SPS/LSP_LCDVeekMT2_Q13/testbench_LCDlogic.vhd
+Z30 FC:/SPS/LSP_LCDVeekMT2_Q13/testbench_LCDlogic.vhd
+l0
+L20
+Ve?UBMo42jKeVE6PN:XP9<2
+!s100 H01^8hAADlR?3KB`4F94:2
+R7
+32
+!i10b 1
+Z31 !s108 1712560882.671000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/SPS/LSP_LCDVeekMT2_Q13/testbench_LCDlogic.vhd|
+Z33 !s107 C:/SPS/LSP_LCDVeekMT2_Q13/testbench_LCDlogic.vhd|
+R11
+R12
+Atestbench
+R15
+R28
+R1
+R2
+R3
+Z34 DEx4 work 18 testbench_lcdlogic 0 22 e?UBMo42jKeVE6PN:XP9<2
+l80
+L23
+Z35 VF;g4aLUMk`:7[dRELnU;a1
+Z36 !s100 =JzR0PPB_Cn>F0<gVU<A`2
+R7
+32
+!i10b 1
+R31
+R32
+R33
+R11
+R12

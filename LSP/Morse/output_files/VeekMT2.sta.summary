@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : 14.543
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'inst8|inst_Buzzer|b2v_inst_clockGenrator|audioPllClockGen|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 51.035
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'inst8|inst_Buzzer|b2v_inst_clockGenrator|audioPllClockGen|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'inst8|inst_Buzzer|b2v_inst_clockGenrator|audioPllClockGen|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 52.103
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'inst8|inst_Buzzer|b2v_inst_clockGenrator|audioPllClockGen|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.667
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.606
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst8|inst_Buzzer|b2v_inst_clockGenrator|audioPllClockGen|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 26.834
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : 15.044
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'inst8|inst_Buzzer|b2v_inst_clockGenrator|audioPllClockGen|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 51.358
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'inst8|inst_Buzzer|b2v_inst_clockGenrator|audioPllClockGen|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'inst8|inst_Buzzer|b2v_inst_clockGenrator|audioPllClockGen|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 52.271
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'inst8|inst_Buzzer|b2v_inst_clockGenrator|audioPllClockGen|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.490
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.593
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst8|inst_Buzzer|b2v_inst_clockGenrator|audioPllClockGen|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 26.836
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : 17.259
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'inst8|inst_Buzzer|b2v_inst_clockGenrator|audioPllClockGen|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 52.636
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'inst8|inst_Buzzer|b2v_inst_clockGenrator|audioPllClockGen|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'inst8|inst_Buzzer|b2v_inst_clockGenrator|audioPllClockGen|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 53.143
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'inst8|inst_Buzzer|b2v_inst_clockGenrator|audioPllClockGen|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.786
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.265
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst8|inst_Buzzer|b2v_inst_clockGenrator|audioPllClockGen|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 26.905
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,5 @@
+PLL_Name	VeekMT2_LCDgenerator:iLCDgenerator|VeekMT2_LCDgenerator_PLL:iLCDpll|altpll:altpll_component|VeekMT2_LCDgenerator_PLL_altpll:auto_generated|pll1
+PLLJITTER	53
+PLLSPEmax	84
+PLLSPEmin	-53
+

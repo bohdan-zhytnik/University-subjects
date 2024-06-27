@@ -1,0 +1,28 @@
+v 4
+file . "../ZHYTN_bmp.vhd" "d4fd845077d2fd3c3bcc5e5fb73d43a329395bb5" "20240524130320.301":
+  entity zhytn_bmp at 11( 662) + 0 on 1923;
+  architecture rtl of zhytn_bmp at 18( 936) + 0 on 1924;
+file . "../LCDlogicTask4.vhd" "061b895380340f0ad963406347913b5ae6f00ea4" "20240521072144.840":
+  entity lcdlogictask4 at 8( 282) + 0 on 937;
+  architecture behavioral of lcdlogictask4 at 25( 1462) + 0 on 938;
+file . "../LCDlogic0anim.vhd" "ef9b478f469bb96323ab23e4bc4fab2d956c3577" "20240524130320.465":
+  entity lcdlogic0anim at 7( 274) + 0 on 1925;
+  architecture behavioral of lcdlogic0anim at 23( 1364) + 0 on 1926;
+file . "../Consolas24pt_Font.vhd" "ec9458e4d8994a533dd54c711d73e9766b581639" "20240524130319.444":
+  entity consolas24pt_font at 4( 185) + 0 on 1919;
+  architecture behavioral of consolas24pt_font at 13( 408) + 0 on 1920;
+file . "../imgLSPbmp.vhd" "0d4eb0f396d9e8ea42ff558648cbbf5aecb945cb" "20240524130319.503":
+  entity imglspbmp at 11( 643) + 0 on 1921;
+  architecture rtl of imglspbmp at 18( 917) + 0 on 1922;
+file . "../LCDtestModulo.vhd" "3c91f831d63ab03be35c0deaa6c969f37eafdc3c" "20240515191154.521":
+  entity lcdtestmodulo at 5( 335) + 0 on 19;
+  architecture behavioral of lcdtestmodulo at 21( 1210) + 0 on 20;
+file . "../testbench_LCDlogicAnim.vhd" "e43f847dca084da72f1e88b970b5c7af9fb439c9" "20240524130320.595":
+  entity testbench_lcdlogicanim at 16( 835) + 0 on 1927;
+  architecture testbench of testbench_lcdlogicanim at 24( 1123) + 0 on 1928;
+file . "../LCDpackage.vhd" "7f7ea85c5f0a8273c3f7cf7d0c3336c0eb2e631c" "20240524130319.372":
+  package lcdpackage at 10( 607) + 0 on 1917 body;
+  package body lcdpackage at 79( 3944) + 0 on 1918;
+file . "../testbench_LCDgenOnly.vhd" "7f2176ad74acbc92b38d409e64b98fe0dce34d01" "20240515191154.586":
+  entity testbench_lcdgenonly at 7( 398) + 0 on 21;
+  architecture testbench of testbench_lcdgenonly at 14( 607) + 0 on 22;
